@@ -13,7 +13,6 @@ const start = async() => {
     const jsonProducts = JSON.parse(
       await readFile(new URL('./jobify-mock-data.json', import.meta.url)))
     await Job.create(jsonProducts)
-    console.log('Success! The lies are in!!')
     process.exit(0)
   } catch (error) {
     console.log(error)
